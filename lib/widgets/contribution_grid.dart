@@ -28,17 +28,13 @@ class ContributionGrid extends StatelessWidget {
     final today = DateTime.now();
     final year = today.year;
 
-    // Primer día del año
     final firstDay = DateTime(year, 1, 1);
-    // Último día del año
     final lastDay = DateTime(year, 12, 31);
 
     // Ajustar para empezar en lunes
-    final startDate =
-        firstDay.subtract(Duration(days: firstDay.weekday - 1));
+    final startDate = firstDay.subtract(Duration(days: firstDay.weekday - 1));
 
-    final totalDays =
-        lastDay.difference(startDate).inDays + 1;
+    final totalDays = lastDay.difference(startDate).inDays + 1;
 
     final daysLabels = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
 
@@ -58,10 +54,7 @@ class ContributionGrid extends StatelessWidget {
                     child: Text(
                       d,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 11,
-                        color: Colors.grey,
-                      ),
+                      style: const TextStyle(fontSize: 11, color: Colors.grey),
                     ),
                   ),
                 ),
@@ -73,11 +66,9 @@ class ContributionGrid extends StatelessWidget {
             // SEMANAS DEL AÑO
             Column(
               children: List.generate((totalDays / 7).ceil(), (weekIndex) {
-                final weekStart =
-                    startDate.add(Duration(days: weekIndex * 7));
+                final weekStart = startDate.add(Duration(days: weekIndex * 7));
 
-                final showMonth =
-                    weekStart.day <= 7 && weekStart.month <= 12;
+                final showMonth = weekStart.day <= 7 && weekStart.month <= 12;
 
                 return Row(
                   children: [
@@ -95,8 +86,9 @@ class ContributionGrid extends StatelessWidget {
 
                     // DÍAS
                     ...List.generate(7, (dayIndex) {
-                      final currentDate =
-                          weekStart.add(Duration(days: dayIndex));
+                      final currentDate = weekStart.add(
+                        Duration(days: dayIndex),
+                      );
 
                       // Fuera del año → vacío
                       if (currentDate.year != year) {
@@ -121,10 +113,7 @@ class ContributionGrid extends StatelessWidget {
                           color: _getColor(level),
                           borderRadius: BorderRadius.circular(4),
                           border: isToday
-                              ? Border.all(
-                                  color: Colors.white,
-                                  width: 2,
-                                )
+                              ? Border.all(color: Colors.white, width: 2)
                               : null,
                         ),
                       );
