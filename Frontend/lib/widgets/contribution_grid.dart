@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+import 'package:provider/provider.dart';
+import '../providers/contribution_provider.dart';
 
 class ContributionGrid extends StatelessWidget {
   const ContributionGrid({super.key});
@@ -24,107 +25,111 @@ class ContributionGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final random = Random();
     final today = DateTime.now();
     final year = today.year;
 
     final firstDay = DateTime(year, 1, 1);
     final lastDay = DateTime(year, 12, 31);
 
-    // Ajustar para empezar en lunes
     final startDate = firstDay.subtract(Duration(days: firstDay.weekday - 1));
 
     final totalDays = lastDay.difference(startDate).inDays + 1;
 
     final daysLabels = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'];
 
-    return SingleChildScrollView(
-      child: SizedBox(
-        width: 420, // mismo tamaño en móvil y PC
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // DÍAS DE LA SEMANA
-            Row(
+    return Consumer<ContributionProvider>(
+      builder: (context, provider, _) {
+        final contributionsMap = provider.contributionsMap;
+
+        return SingleChildScrollView(
+          child: SizedBox(
+            width: 420,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(width: 70),
-                ...daysLabels.map(
-                  (d) => SizedBox(
-                    width: boxSize + spacing,
-                    child: Text(
-                      d,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 11, color: Colors.grey),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 8),
-
-            // SEMANAS DEL AÑO
-            Column(
-              children: List.generate((totalDays / 7).ceil(), (weekIndex) {
-                final weekStart = startDate.add(Duration(days: weekIndex * 7));
-
-                final showMonth = weekStart.day <= 7 && weekStart.month <= 12;
-
-                return Row(
+                Row(
                   children: [
-                    // MES (vertical)
-                    SizedBox(
-                      width: 70,
-                      child: Text(
-                        showMonth ? _monthName(weekStart.month) : '',
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey,
+                    const SizedBox(width: 70),
+                    ...daysLabels.map(
+                      (d) => SizedBox(
+                        width: boxSize + spacing,
+                        child: Text(
+                          d,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 11,
+                            color: Colors.grey,
+                          ),
                         ),
                       ),
                     ),
-
-                    // DÍAS
-                    ...List.generate(7, (dayIndex) {
-                      final currentDate = weekStart.add(
-                        Duration(days: dayIndex),
-                      );
-
-                      // Fuera del año → vacío
-                      if (currentDate.year != year) {
-                        return SizedBox(
-                          width: boxSize + spacing,
-                          height: boxSize + spacing,
-                        );
-                      }
-
-                      final level = random.nextInt(5);
-
-                      final isToday =
-                          currentDate.year == today.year &&
-                          currentDate.month == today.month &&
-                          currentDate.day == today.day;
-
-                      return Container(
-                        margin: EdgeInsets.all(spacing / 2),
-                        width: boxSize,
-                        height: boxSize,
-                        decoration: BoxDecoration(
-                          color: _getColor(level),
-                          borderRadius: BorderRadius.circular(4),
-                          border: isToday
-                              ? Border.all(color: Colors.white, width: 2)
-                              : null,
-                        ),
-                      );
-                    }),
                   ],
-                );
-              }),
+                ),
+                const SizedBox(height: 8),
+                Column(
+                  children: List.generate((totalDays / 7).ceil(), (weekIndex) {
+                    final weekStart = startDate.add(
+                      Duration(days: weekIndex * 7),
+                    );
+                    final showMonth =
+                        weekStart.day <= 7 && weekStart.month <= 12;
+
+                    return Row(
+                      children: [
+                        SizedBox(
+                          width: 70,
+                          child: Text(
+                            showMonth ? _monthName(weekStart.month) : '',
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                        ...List.generate(7, (dayIndex) {
+                          final currentDate = weekStart.add(
+                            Duration(days: dayIndex),
+                          );
+
+                          if (currentDate.year != year) {
+                            return SizedBox(
+                              width: boxSize + spacing,
+                              height: boxSize + spacing,
+                            );
+                          }
+
+                          final dateKey =
+                              '${currentDate.year}-${currentDate.month.toString().padLeft(2, '0')}-${currentDate.day.toString().padLeft(2, '0')}';
+                          final contribution = contributionsMap[dateKey];
+                          final level = contribution?.level ?? 0;
+
+                          final isToday =
+                              currentDate.year == today.year &&
+                              currentDate.month == today.month &&
+                              currentDate.day == today.day;
+
+                          return Container(
+                            margin: EdgeInsets.all(spacing / 2),
+                            width: boxSize,
+                            height: boxSize,
+                            decoration: BoxDecoration(
+                              color: _getColor(level),
+                              borderRadius: BorderRadius.circular(4),
+                              border: isToday
+                                  ? Border.all(color: Colors.white, width: 2)
+                                  : null,
+                            ),
+                          );
+                        }),
+                      ],
+                    );
+                  }),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 
