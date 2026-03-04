@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__life_calendar_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/linux -B/home/jhosue/Documentos/life_calendar/build/linux/x64/debug
+  command = /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/Frontend/linux -B/home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug
   description = Re-running CMake...
   generator = 1
 

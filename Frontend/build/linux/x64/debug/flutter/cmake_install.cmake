@@ -1,8 +1,8 @@
-# Install script for directory: /home/jhosue/Documentos/life_calendar/linux/flutter
+# Install script for directory: /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jhosue/Documentos/life_calendar/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

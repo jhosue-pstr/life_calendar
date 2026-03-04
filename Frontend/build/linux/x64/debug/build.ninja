@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/
+cmake_ninja_workdir = /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug && /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/linux -B/home/jhosue/Documentos/life_calendar/build/linux/x64/debug
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug && /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/Frontend/linux -B/home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -74,7 +74,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -86,7 +86,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -98,7 +98,7 @@ build install/local: phony CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -107,21 +107,21 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jhosue/Documentos/life_calendar/linux/CMakeLists.txt
+# /home/jhosue/Documentos/life_calendar/Frontend/linux/CMakeLists.txt
 # =============================================================================
 
 
 #############################################
 # Utility command for flutter_assemble
 
-build flutter/flutter_assemble: phony flutter/CMakeFiles/flutter_assemble /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_
+build flutter/flutter_assemble: phony flutter/CMakeFiles/flutter_assemble /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_
 
 
 #############################################
 # Utility command for edit_cache
 
 build flutter/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -132,7 +132,7 @@ build flutter/edit_cache: phony flutter/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build flutter/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter && /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/linux -B/home/jhosue/Documentos/life_calendar/build/linux/x64/debug
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter && /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/Frontend/linux -B/home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -150,7 +150,7 @@ build flutter/list_install_components: phony
 # Utility command for install
 
 build flutter/CMakeFiles/install.util: CUSTOM_COMMAND flutter/all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -162,7 +162,7 @@ build flutter/install: phony flutter/CMakeFiles/install.util
 # Utility command for install/local
 
 build flutter/CMakeFiles/install/local.util: CUSTOM_COMMAND flutter/all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -174,7 +174,7 @@ build flutter/install/local: phony flutter/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build flutter/CMakeFiles/install/strip.util: CUSTOM_COMMAND flutter/all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -185,20 +185,20 @@ build flutter/install/strip: phony flutter/CMakeFiles/install/strip.util
 #############################################
 # Phony custom command for flutter/CMakeFiles/flutter_assemble
 
-build flutter/CMakeFiles/flutter_assemble | ${cmake_ninja_workdir}flutter/CMakeFiles/flutter_assemble: phony /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/flutter_linux.h
+build flutter/CMakeFiles/flutter_assemble | ${cmake_ninja_workdir}flutter/CMakeFiles/flutter_assemble: phony /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h
 
 
 #############################################
-# Custom command for /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so
+# Custom command for /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so
 
-build /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_ | ${cmake_ninja_workdir}flutter/_phony_: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter && /usr/bin/cmake -E env FLUTTER_ROOT=/home/jhosue/Documentos/flutter PROJECT_DIR=/home/jhosue/Documentos/life_calendar DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzUuNg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049OWY0NTVkMjQ4Ng==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049ZDI5MTM2MzJhNA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjI= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=/home/jhosue/Documentos/life_calendar/.dart_tool/package_config.json FLUTTER_TARGET=/home/jhosue/Documentos/life_calendar/lib/main.dart /home/jhosue/Documentos/flutter/packages/flutter_tools/bin/tool_backend.sh linux-x64 Debug
-  DESC = Generating /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_engine.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_call.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_method_response.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_value.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/fl_view.h, /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/flutter_linux/flutter_linux.h, _phony_
+build /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h flutter/_phony_ | ${cmake_ninja_workdir}flutter/_phony_: CUSTOM_COMMAND
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter && /usr/bin/cmake -E env FLUTTER_ROOT=/home/jhosue/Documentos/flutter PROJECT_DIR=/home/jhosue/Documentos/life_calendar/Frontend DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzUuNg==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049OWY0NTVkMjQ4Ng==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049ZDI5MTM2MzJhNA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjI= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=/home/jhosue/Documentos/life_calendar/Frontend/.dart_tool/package_config.json FLUTTER_TARGET=/home/jhosue/Documentos/life_calendar/Frontend/lib/main.dart /home/jhosue/Documentos/flutter/packages/flutter_tools/bin/tool_backend.sh linux-x64 Debug
+  DESC = Generating /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_basic_message_channel.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_binary_messenger.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_dart_project.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_engine.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_message_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_json_method_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_message_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_call.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_channel.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_method_response.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registrar.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_plugin_registry.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_message_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_standard_method_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_string_codec.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_value.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/fl_view.h, /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/flutter_linux/flutter_linux.h, _phony_
   restat = 1
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/jhosue/Documentos/life_calendar/linux/CMakeLists.txt
+# /home/jhosue/Documentos/life_calendar/Frontend/linux/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -210,27 +210,27 @@ build /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_l
 
 build cmake_object_order_depends_target_life_calendar: phony || flutter/flutter_assemble
 
-build runner/CMakeFiles/life_calendar.dir/main.cc.o: CXX_COMPILER__life_calendar_unscanned_Debug /home/jhosue/Documentos/life_calendar/linux/runner/main.cc || cmake_object_order_depends_target_life_calendar
+build runner/CMakeFiles/life_calendar.dir/main.cc.o: CXX_COMPILER__life_calendar_unscanned_Debug /home/jhosue/Documentos/life_calendar/Frontend/linux/runner/main.cc || cmake_object_order_depends_target_life_calendar
   DEFINES = -DAPPLICATION_ID=\"com.example.life_calendar\"
   DEP_FILE = runner/CMakeFiles/life_calendar.dir/main.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/jhosue/Documentos/life_calendar/linux -I/home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include
+  INCLUDES = -I/home/jhosue/Documentos/life_calendar/Frontend/linux -I/home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include
   OBJECT_DIR = runner/CMakeFiles/life_calendar.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/life_calendar.dir
 
-build runner/CMakeFiles/life_calendar.dir/my_application.cc.o: CXX_COMPILER__life_calendar_unscanned_Debug /home/jhosue/Documentos/life_calendar/linux/runner/my_application.cc || cmake_object_order_depends_target_life_calendar
+build runner/CMakeFiles/life_calendar.dir/my_application.cc.o: CXX_COMPILER__life_calendar_unscanned_Debug /home/jhosue/Documentos/life_calendar/Frontend/linux/runner/my_application.cc || cmake_object_order_depends_target_life_calendar
   DEFINES = -DAPPLICATION_ID=\"com.example.life_calendar\"
   DEP_FILE = runner/CMakeFiles/life_calendar.dir/my_application.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/jhosue/Documentos/life_calendar/linux -I/home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include
+  INCLUDES = -I/home/jhosue/Documentos/life_calendar/Frontend/linux -I/home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include
   OBJECT_DIR = runner/CMakeFiles/life_calendar.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/life_calendar.dir
 
-build runner/CMakeFiles/life_calendar.dir/__/flutter/generated_plugin_registrant.cc.o: CXX_COMPILER__life_calendar_unscanned_Debug /home/jhosue/Documentos/life_calendar/linux/flutter/generated_plugin_registrant.cc || cmake_object_order_depends_target_life_calendar
+build runner/CMakeFiles/life_calendar.dir/__/flutter/generated_plugin_registrant.cc.o: CXX_COMPILER__life_calendar_unscanned_Debug /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/generated_plugin_registrant.cc || cmake_object_order_depends_target_life_calendar
   DEFINES = -DAPPLICATION_ID=\"com.example.life_calendar\"
   DEP_FILE = runner/CMakeFiles/life_calendar.dir/__/flutter/generated_plugin_registrant.cc.o.d
   FLAGS = -g -Wall -Werror -pthread
-  INCLUDES = -I/home/jhosue/Documentos/life_calendar/linux -I/home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include
+  INCLUDES = -I/home/jhosue/Documentos/life_calendar/Frontend/linux -I/home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral -isystem /usr/include/gtk-3.0 -isystem /usr/include/pango-1.0 -isystem /usr/include/glib-2.0 -isystem /usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2 -isystem /usr/include/libpng16 -isystem /usr/include/libmount -isystem /usr/include/blkid -isystem /usr/include/fribidi -isystem /usr/include/cairo -isystem /usr/include/pixman-1 -isystem /usr/include/gdk-pixbuf-2.0 -isystem /usr/include/webp -isystem /usr/include/gio-unix-2.0 -isystem /usr/include/atk-1.0 -isystem /usr/include/at-spi2-atk/2.0 -isystem /usr/include/at-spi-2.0 -isystem /usr/include/dbus-1.0 -isystem /usr/lib/x86_64-linux-gnu/dbus-1.0/include
   OBJECT_DIR = runner/CMakeFiles/life_calendar.dir
   OBJECT_FILE_DIR = runner/CMakeFiles/life_calendar.dir/__/flutter
 
@@ -242,9 +242,9 @@ build runner/CMakeFiles/life_calendar.dir/__/flutter/generated_plugin_registrant
 #############################################
 # Link the executable intermediates_do_not_run/life_calendar
 
-build intermediates_do_not_run/life_calendar: CXX_EXECUTABLE_LINKER__life_calendar_Debug runner/CMakeFiles/life_calendar.dir/main.cc.o runner/CMakeFiles/life_calendar.dir/my_application.cc.o runner/CMakeFiles/life_calendar.dir/__/flutter/generated_plugin_registrant.cc.o | /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/x86_64-linux-gnu/libgtk-3.so /usr/lib/x86_64-linux-gnu/libgdk-3.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so /usr/lib/x86_64-linux-gnu/libpango-1.0.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libatk-1.0.so /usr/lib/x86_64-linux-gnu/libcairo-gobject.so /usr/lib/x86_64-linux-gnu/libcairo.so /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so /usr/lib/x86_64-linux-gnu/libgio-2.0.so /usr/lib/x86_64-linux-gnu/libgobject-2.0.so /usr/lib/x86_64-linux-gnu/libglib-2.0.so || flutter/flutter_assemble
+build intermediates_do_not_run/life_calendar: CXX_EXECUTABLE_LINKER__life_calendar_Debug runner/CMakeFiles/life_calendar.dir/main.cc.o runner/CMakeFiles/life_calendar.dir/my_application.cc.o runner/CMakeFiles/life_calendar.dir/__/flutter/generated_plugin_registrant.cc.o | /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so /usr/lib/x86_64-linux-gnu/libgtk-3.so /usr/lib/x86_64-linux-gnu/libgdk-3.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so /usr/lib/x86_64-linux-gnu/libpango-1.0.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libatk-1.0.so /usr/lib/x86_64-linux-gnu/libcairo-gobject.so /usr/lib/x86_64-linux-gnu/libcairo.so /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so /usr/lib/x86_64-linux-gnu/libgio-2.0.so /usr/lib/x86_64-linux-gnu/libgobject-2.0.so /usr/lib/x86_64-linux-gnu/libglib-2.0.so || flutter/flutter_assemble
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral:  /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/x86_64-linux-gnu/libgtk-3.so  /usr/lib/x86_64-linux-gnu/libgdk-3.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  /usr/lib/x86_64-linux-gnu/libpango-1.0.so  /usr/lib/x86_64-linux-gnu/libharfbuzz.so  /usr/lib/x86_64-linux-gnu/libatk-1.0.so  /usr/lib/x86_64-linux-gnu/libcairo-gobject.so  /usr/lib/x86_64-linux-gnu/libcairo.so  /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so  /usr/lib/x86_64-linux-gnu/libgio-2.0.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so
+  LINK_LIBRARIES = -Wl,-rpath,/home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral:  /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/libflutter_linux_gtk.so  /usr/lib/x86_64-linux-gnu/libgtk-3.so  /usr/lib/x86_64-linux-gnu/libgdk-3.so  /usr/lib/x86_64-linux-gnu/libz.so  /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  /usr/lib/x86_64-linux-gnu/libpango-1.0.so  /usr/lib/x86_64-linux-gnu/libharfbuzz.so  /usr/lib/x86_64-linux-gnu/libatk-1.0.so  /usr/lib/x86_64-linux-gnu/libcairo-gobject.so  /usr/lib/x86_64-linux-gnu/libcairo.so  /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so  /usr/lib/x86_64-linux-gnu/libgio-2.0.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so
   OBJECT_DIR = runner/CMakeFiles/life_calendar.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -256,7 +256,7 @@ build intermediates_do_not_run/life_calendar: CXX_EXECUTABLE_LINKER__life_calend
 # Utility command for edit_cache
 
 build runner/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/runner && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/runner && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -267,7 +267,7 @@ build runner/edit_cache: phony runner/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build runner/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/runner && /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/linux -B/home/jhosue/Documentos/life_calendar/build/linux/x64/debug
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/runner && /usr/bin/cmake --regenerate-during-build -S/home/jhosue/Documentos/life_calendar/Frontend/linux -B/home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -285,7 +285,7 @@ build runner/list_install_components: phony
 # Utility command for install
 
 build runner/CMakeFiles/install.util: CUSTOM_COMMAND runner/all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/runner && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/runner && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -297,7 +297,7 @@ build runner/install: phony runner/CMakeFiles/install.util
 # Utility command for install/local
 
 build runner/CMakeFiles/install/local.util: CUSTOM_COMMAND runner/all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/runner && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/runner && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -309,7 +309,7 @@ build runner/install/local: phony runner/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build runner/CMakeFiles/install/strip.util: CUSTOM_COMMAND runner/all
-  COMMAND = cd /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/runner && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/runner && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -329,21 +329,21 @@ build life_calendar: phony intermediates_do_not_run/life_calendar
 # =============================================================================
 
 #############################################
-# Folder: /home/jhosue/Documentos/life_calendar/build/linux/x64/debug
+# Folder: /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug
 
 build all: phony flutter/all runner/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/flutter
+# Folder: /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/flutter
 
 build flutter/all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: /home/jhosue/Documentos/life_calendar/build/linux/x64/debug/runner
+# Folder: /home/jhosue/Documentos/life_calendar/Frontend/build/linux/x64/debug/runner
 
 build runner/all: phony intermediates_do_not_run/life_calendar
 
@@ -354,14 +354,14 @@ build runner/all: phony intermediates_do_not_run/life_calendar
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/jhosue/Documentos/life_calendar/linux/CMakeLists.txt /home/jhosue/Documentos/life_calendar/linux/flutter/CMakeLists.txt /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/generated_config.cmake /home/jhosue/Documentos/life_calendar/linux/flutter/generated_plugins.cmake /home/jhosue/Documentos/life_calendar/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/jhosue/Documentos/life_calendar/Frontend/linux/CMakeLists.txt /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/CMakeLists.txt /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/generated_config.cmake /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/generated_plugins.cmake /home/jhosue/Documentos/life_calendar/Frontend/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/jhosue/Documentos/life_calendar/linux/CMakeLists.txt /home/jhosue/Documentos/life_calendar/linux/flutter/CMakeLists.txt /home/jhosue/Documentos/life_calendar/linux/flutter/ephemeral/generated_config.cmake /home/jhosue/Documentos/life_calendar/linux/flutter/generated_plugins.cmake /home/jhosue/Documentos/life_calendar/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/jhosue/Documentos/life_calendar/Frontend/linux/CMakeLists.txt /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/CMakeLists.txt /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/ephemeral/generated_config.cmake /home/jhosue/Documentos/life_calendar/Frontend/linux/flutter/generated_plugins.cmake /home/jhosue/Documentos/life_calendar/Frontend/linux/runner/CMakeLists.txt /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake /usr/share/cmake-3.28/Modules/FindPkgConfig.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################
