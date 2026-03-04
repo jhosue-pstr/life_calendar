@@ -18,14 +18,17 @@ This file contains guidelines and commands for agents working on this project.
 # Navigate to frontend
 cd Frontend
 
+# Install dependencies
+flutter pub get
+
 # Run the app
 flutter run
 
 # Build for specific platforms
 flutter build apk          # Android
 flutter build ios         # iOS
-flutter build web         # Web
-flutter build linux       # Linux desktop
+flutter build web        # Web
+flutter build linux      # Linux desktop
 
 # Lint and analyze
 flutter analyze
@@ -38,6 +41,9 @@ flutter test test/widget_test.dart
 
 # Run tests with coverage
 flutter test --coverage
+
+# Build for Linux (production)
+flutter build linux --release
 ```
 
 ### FastAPI (Backend)
@@ -63,7 +69,7 @@ pytest
 pytest -v                          # Verbose
 pytest tests/                      # Specific directory
 pytest tests/test_file.py          # Single file
-pytest -k "test_name"              # Run tests matching pattern
+pytest -k "test_name"             # Run tests matching pattern
 
 # Lint with ruff (if installed)
 ruff check .
@@ -81,8 +87,8 @@ sudo -u postgres createdb life_calendar
 # Connect to database
 sudo -u postgres psql -d life_calendar
 
-# Run Alembic migrations (if configured)
-alembic upgrade head
+# Check tables
+psql -d life_calendar -c "\dt"
 ```
 
 ---
@@ -181,21 +187,41 @@ import 'widgets/contribution_grid.dart';
 - Use `const` constructors when possible
 - Separate UI into small, reusable widgets
 - Follow Flutter's widget composition pattern
+- Use `Consumer` from Provider for reactive updates
 
 **State Management**
 - Use StatefulWidget for local state
-- Use Provider/Riverpod for global state (if needed)
+- Use Provider for global state
+- Use `context.watch<T>()` for reactive UI
+- Use `context.read<T>()` for one-time reads
 
 **Code Organization**
 ```
 lib/
-├── main.dart
-├── calendar_page.dart
-├── models/
-├── providers/
-├── screens/
-├── services/
-└── widgets/
+├── main.dart                 # App entry, providers setup
+├── calendar_page.dart        # Main dashboard
+├── models/                  # Data models (User, Activity, Goal, etc.)
+├── services/                # API services (dio HTTP client)
+│   ├── api_client.dart      # Dio configuration, JWT interceptors
+│   ├── auth_service.dart
+│   ├── activity_service.dart
+│   ├── goal_service.dart
+│   ├── bad_habit_service.dart
+│   └── contribution_service.dart
+├── providers/               # State management (Provider/ChangeNotifier)
+│   ├── auth_provider.dart
+│   ├── activity_provider.dart
+│   ├── goal_provider.dart
+│   ├── bad_habit_provider.dart
+│   └── contribution_provider.dart
+├── screens/                # Pages
+│   ├── login_screen.dart
+│   └── register_screen.dart
+└── widgets/                # Reusable widgets
+    ├── contribution_grid.dart
+    ├── activities_section.dart
+    ├── goals_section.dart
+    └── bad_habits_section.dart
 ```
 
 ---
@@ -214,7 +240,6 @@ lib/
 | `contributions` | Annual contribution grid (like GitHub) |
 
 ### Contribution Level Calculation
-
 - Level 0: 0 activities completed
 - Level 1: 1-2 activities
 - Level 2: 3-4 activities
@@ -232,7 +257,7 @@ lib/
 - `GET /auth/me` - Get current user
 
 ### Activities
-- `GET /activities` - List activities (filter by date)
+- `GET /activities` - List activities (filter: date_filter)
 - `POST /activities` - Create activity
 - `PUT /activities/{id}` - Update activity
 - `DELETE /activities/{id}` - Delete activity
@@ -253,7 +278,7 @@ lib/
 - `DELETE /bad-habits/{id}` - Delete bad habit
 
 ### Contributions
-- `GET /contributions` - List contributions (filter by year)
+- `GET /contributions` - List contributions (filter: year)
 - `GET /contributions/year/{year}` - Get year contributions
 
 ---
@@ -263,7 +288,7 @@ lib/
 ### Backend (.env)
 ```
 DATABASE_URL=postgresql://postgres:123@localhost/life_calendar
-SECRET_KEY=your-secret-key
+SECRET_KEY=your-secret-key-change-in-production
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
@@ -272,16 +297,18 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 ## Common Tasks
 
-### Adding a new model
+### Adding a new feature (Backend)
 1. Create model in `app/models/`
 2. Create schema in `app/schemas/`
 3. Create router in `app/routers/`
 4. Register router in `app/main.py`
+5. Add service methods if needed
 
-### Adding a new Flutter widget
-1. Create file in `lib/widgets/` or appropriate folder
-2. Follow naming: `widget_name.dart`
-3. Use `const` constructor when possible
+### Adding a new feature (Flutter)
+1. Create model in `lib/models/`
+2. Create service in `lib/services/`
+3. Create provider in `lib/providers/`
+4. Add UI in `lib/widgets/` or update existing pages
 
 ### Running the full stack
 ```bash
@@ -291,3 +318,22 @@ cd Backend && source venv/bin/activate && uvicorn app.main:app --reload
 # Terminal 2: Frontend
 cd Frontend && flutter run
 ```
+
+---
+
+## Dependencies
+
+### Flutter (pubspec.yaml)
+- `provider` - State management
+- `dio` - HTTP client
+- `shared_preferences` - Local token storage
+- `intl` - Date formatting
+
+### Backend (requirements.txt)
+- `fastapi` - Web framework
+- `uvicorn` - ASGI server
+- `sqlalchemy` - ORM
+- `psycopg2-binary` - PostgreSQL driver
+- `pydantic` - Data validation
+- `python-jose` - JWT tokens
+- `passlib[bcrypt]` - Password hashing
