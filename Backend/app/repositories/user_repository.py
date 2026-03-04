@@ -1,0 +1,17 @@
+from typing import Optional
+
+from sqlalchemy.orm import Session
+
+from app.models.user import User
+from app.repositories.base_repository import BaseRepository
+
+
+class UserRepository(BaseRepository[User]):
+    def get_by_email(self, db: Session, email: str) -> Optional[User]:
+        return db.query(self.model).filter(User.email == email).first()
+
+    def get_by_email_with_password(self, db: Session, email: str) -> Optional[User]:
+        return db.query(User).filter(User.email == email).first()
+
+
+user_repository = UserRepository(User)

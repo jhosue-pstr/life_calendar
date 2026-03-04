@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'services/api_client.dart';
-import 'services/auth_service.dart';
-import 'services/activity_service.dart';
-import 'services/goal_service.dart';
-import 'services/bad_habit_service.dart';
-import 'services/contribution_service.dart';
-import 'providers/auth_provider.dart';
-import 'providers/activity_provider.dart';
-import 'providers/goal_provider.dart';
-import 'providers/bad_habit_provider.dart';
-import 'providers/contribution_provider.dart';
-import 'screens/login_screen.dart';
-import 'calendar_page.dart';
+import 'shared/core/api_client.dart';
+import 'features/auth/data/services/auth_service.dart';
+import 'features/activities/data/services/activity_service.dart';
+import 'features/goals/data/services/goal_service.dart';
+import 'features/bad_habits/data/services/bad_habit_service.dart';
+import 'features/contributions/data/services/contribution_service.dart';
+import 'features/auth/presentation/providers/auth_provider.dart';
+import 'features/activities/presentation/providers/activity_provider.dart';
+import 'features/goals/presentation/providers/goal_provider.dart';
+import 'features/bad_habits/presentation/providers/bad_habit_provider.dart';
+import 'features/contributions/presentation/providers/contribution_provider.dart';
+import 'features/auth/presentation/screens/login_screen.dart';
+import 'features/calendar/presentation/pages/calendar_page.dart';
 
 void main() {
   runApp(const MyApp());

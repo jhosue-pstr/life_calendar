@@ -1,13 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.database import init_db
-from app.routers import auth, activities, goals, bad_habits, contributions
+from app.core.config import get_settings
+from app.core.database import init_db
+from app.api.v1.router import api_router
+
+settings = get_settings()
 
 app = FastAPI(
     title="Life Calendar API",
     description="Backend for Life Calendar - Track your daily activities, goals, and habits",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
 )
 
 app.add_middleware(
@@ -18,11 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router)
-app.include_router(activities.router)
-app.include_router(goals.router)
-app.include_router(bad_habits.router)
-app.include_router(contributions.router)
+app.include_router(api_router, prefix=settings.API_V1_STR)
 
 
 @app.on_event("startup")
