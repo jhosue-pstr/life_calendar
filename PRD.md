@@ -1,127 +1,127 @@
-# Life Calendar - Product Requirements Document (PRD)
+# Life Calendar - Documento de Requisitos del Producto (PRD)
 
-## 1. Project Overview
+## 1. Visión General del Proyecto
 
-**Project Name:** Life Calendar  
-**Type:** Mobile & Desktop Application (Flutter) with REST API Backend  
-**Core Functionality:** A personal productivity tracker that helps users monitor daily activities, custom goals, and bad habits through an annual contribution grid similar to GitHub.  
-**Target Users:** Individuals looking to track their daily habits, productivity, and personal growth.
-
----
-
-## 2. Problem Statement
-
-Users need a unified tool to:
-
-- Track daily activities and tasks
-- Set and monitor custom-length goals (7-90 days)
-- Combat bad habits by tracking streak-free days
-- Visualize their productivity over time through an annual contribution grid
+**Nombre del Proyecto:** Life Calendar  
+**Tipo:** Aplicación Móvil y Escritorio (Flutter) con Backend API REST  
+**Funcionalidad Principal:** Un rastreador de productividad personal que ayuda a los usuarios a monitorear actividades diarias, metas personalizadas y malos hábitos a través de una grille de contribución anual similar a GitHub.  
+**Usuarios Objetivo:** Personas que buscan rastrear sus hábitos diarios, productividad y crecimiento personal.
 
 ---
 
-## 3. Product Vision
+## 2. Declaracion del Problema
 
-Life Calendar is a cross-platform application that combines:
+Los usuarios necesitan una herramienta unificada para:
 
-- GitHub-style contribution visualization
-- Todo/Activity management
-- Goal tracking with customizable duration
-- Bad habit streak tracking
-
-All data is persisted in a PostgreSQL database with JWT authentication.
+- Rastrear actividades y tareas diarias
+- Establecer y monitorear metas de duración personalizada (7-90 días)
+- Combatir malos hábitos rastreando días sin recaídas
+- Visualizar su productividad a lo largo del tiempo a través de una grille de contribución anual
 
 ---
 
-## 4. User Stories
+## 3. Visión del Producto
 
-| ID   | User Story                                                                                    | Priority |
-| ---- | --------------------------------------------------------------------------------------------- | -------- |
-| US01 | As a user, I want to register and login so that my data is secure and personal                | Must     |
-| US02 | As a user, I want to add daily activities so that I can track what I do                       | Must     |
-| US03 | As a user, I want to mark activities as done so that I can see my progress                    | Must     |
-| US04 | As a user, I want to create custom goals (7-90 days) so that I can track long-term objectives | Must     |
-| US05 | As a user, I want to check off goal days so that I can see my goal progress                   | Must     |
-| US06 | As a user, I want to add bad habits to track so that I can monitor my streaks                 | Must     |
-| US07 | As a user, I want to trigger a "relapse" when I fail a bad habit so that my streak resets     | Must     |
-| US08 | As a user, I want to see an annual contribution grid so that I can visualize my productivity  | Must     |
-| US09 | As a user, I want my session to persist so that I don't have to login every time              | Must     |
+Life Calendar es una aplicación multiplataforma que combina:
+
+- Visualización de contribución estilo GitHub
+- Gestión de Tareas/Actividades
+- Seguimiento de metas con duración personalizable
+- Rastreo de rachas de malos hábitos
+
+Todos los datos se persisten en una base de datos PostgreSQL con autenticación JWT.
 
 ---
 
-## 5. Functional Requirements
+## 4. Historias de Usuario
 
-### 5.1 Authentication
-
-- User registration (email, password, nickname)
-- User login with JWT token
-- Persistent session using SharedPreferences
-- Logout functionality
-
-### 5.2 Activities
-
-- Create daily activities with title
-- Mark activities as done/undone
-- Delete activities
-- Filter activities by date
-- Auto-update contribution level on change
-
-### 5.3 Goals
-
-- Create goals with custom duration (1-90 days)
-- Set goal title
-- Toggle goal days as completed
-- View active goals
-- Delete goals
-- Goals can have multiple active at once
-
-### 5.4 Bad Habits
-
-- Create bad habits to track
-- View current streak
-- View longest streak achieved
-- Trigger relapse (resets streak to 0)
-- Increment streak manually
-- Delete bad habits
-- Auto-update contribution level on relapse/increment
-
-### 5.5 Contribution Grid
-
-- Annual calendar view (Jan-Dec)
-- Color-coded levels (0-4):
-  - Level 0: 0 activities
-  - Level 1: 1-2 activities
-  - Level 2: 3-4 activities
-  - Level 3: 5-6 activities
-  - Level 4: 7+ activities
-- Bonus: Each bad habit without relapse adds +1 level (max 2 bonus)
-- Today highlighted with border
+| ID   | Historia de Usuario                                                                        | Prioridad |
+| ---- | ----------------------------------------------------------------------------------------- | -------- |
+| US01 | Como usuario, quiero registrarme e iniciar sesión para que mis datos sean seguros         | Debe     |
+| US02 | Como usuario, quiero agregar actividades diarias para rastrear lo que hago               | Debe     |
+| US03 | Como usuario, quiero marcar actividades como hechas para ver mi progreso                | Debe     |
+| US04 | Como usuario, quiero crear metas personalizadas (7-90 días) para rastrear objetivos a largo plazo | Debe     |
+| US05 | Como usuario, quiero marcar los días de meta como completados para ver mi progreso      | Debe     |
+| US06 | Como usuario, quiero agregar malos hábitos para rastrear mis rachas                      | Debe     |
+| US07 | Como usuario, quiero activar una "recaída" cuando fallo un mal hábito para reiniciar mi racha | Debe     |
+| US08 | Como usuario, quiero ver una grille de contribución anual para visualizar mi productividad | Debe     |
+| US09 | Como usuario, quiero que mi sesión persista para no tener que iniciar sesión cada vez   | Debe     |
 
 ---
 
-## 6. Technical Architecture
+## 5. Requisitos Funcionales
+
+### 5.1 Autenticación
+
+- Registro de usuario (email, contraseña, nickname)
+- Inicio de sesión con token JWT
+- Sesión persistente usando SharedPreferences
+- Funcionalidad de cierre de sesión
+
+### 5.2 Actividades
+
+- Crear actividades diarias con título
+- Marcar actividades como hecho/no hecho
+- Eliminar actividades
+- Filtrar actividades por fecha
+- Actualizar automáticamente el nivel de contribución al cambiar
+
+### 5.3 Metas
+
+- Crear metas con duración personalizada (1-90 días)
+- Establecer título de la meta
+- Alternar días de meta como completados
+- Ver metas activas
+- Eliminar metas
+- Puede haber múltiples metas activas simultáneamente
+
+### 5.4 Malos Hábitos
+
+- Crear malos hábitos para rastrear
+- Ver racha actual
+- Ver la racha más larga lograda
+- Activar recaída (reinicia la racha a 0)
+- Incrementar racha manualmente
+- Eliminar malos hábitos
+- Actualizar automáticamente el nivel de contribución al recaer/incrementar
+
+### 5.5 Grille de Contribución
+
+- Vista de calendario anual (Ene-Dic)
+- Niveles codificados por colores (0-4):
+  - Nivel 0: 0 actividades
+  - Nivel 1: 1-2 actividades
+  - Nivel 2: 3-4 actividades
+  - Nivel 3: 5-6 actividades
+  - Nivel 4: 7+ actividades
+- Bonus: Cada mal hábito sin recaída añade +1 nivel (máximo 2 de bonus)
+- Hoy resaltado con borde
+
+---
+
+## 6. Arquitectura Técnica
 
 ### 6.1 Frontend (Flutter)
 
 ```
 Frontend/
 ├── lib/
-│   ├── main.dart                 # App entry, providers setup
-│   ├── calendar_page.dart        # Main dashboard
-│   ├── models/                   # Data models
+│   ├── main.dart                 # Entry de la app, configuración de providers
+│   ├── calendar_page.dart        # Dashboard principal
+│   ├── models/                   # Modelos de datos
 │   │   ├── user.dart
 │   │   ├── activity.dart
 │   │   ├── goal.dart
 │   │   ├── bad_habit.dart
 │   │   └── contribution.dart
-│   ├── services/                 # API communication
-│   │   ├── api_client.dart       # Dio HTTP client
+│   ├── services/                 # Comunicación con API
+│   │   ├── api_client.dart       # Cliente HTTP Dio
 │   │   ├── auth_service.dart
 │   │   ├── activity_service.dart
 │   │   ├── goal_service.dart
 │   │   ├── bad_habit_service.dart
 │   │   └── contribution_service.dart
-│   ├── providers/                # State management
+│   ├── providers/               # Gestión de estado
 │   │   ├── auth_provider.dart
 │   │   ├── activity_provider.dart
 │   │   ├── goal_provider.dart
@@ -137,179 +137,180 @@ Frontend/
 │       └── bad_habits_section.dart
 ```
 
-**Tech Stack:**
+**Stack Tecnológico:**
 
 - Flutter 3.x
-- Provider (state management)
-- Dio (HTTP client)
-- SharedPreferences (local storage)
+- Provider (gestión de estado)
+- Dio (cliente HTTP)
+- SharedPreferences (almacenamiento local)
 
 ### 6.2 Backend (FastAPI)
 
 ```
 Backend/
 ├── app/
-│   ├── main.py                   # FastAPI app
-│   ├── config.py                 # Settings
-│   ├── database.py               # SQLAlchemy setup
-│   ├── models/                   # Database models
+│   ├── main.py                   # App FastAPI
+│   ├── config.py                 # Configuración
+│   ├── database.py               # Configuración SQLAlchemy
+│   ├── models/                   # Modelos de base de datos
 │   │   ├── user.py
 │   │   ├── activity.py
 │   │   ├── goal.py
 │   │   ├── bad_habit.py
 │   │   └── contribution.py
-│   ├── schemas/                  # Pydantic models
-│   ├── routers/                  # API endpoints
+│   ├── schemas/                  # Modelos Pydantic
+│   ├── routers/                 # Endpoints de API
 │   │   ├── auth.py
 │   │   ├── activities.py
 │   │   ├── goals.py
 │   │   ├── bad_habits.py
 │   │   └── contributions.py
 │   └── utils/
-│       ├── auth.py               # JWT utilities
-│       └── contributions.py      # Contribution calculation
+│       ├── auth.py               # Utilidades JWT
+│       ├── contributions.py      # Cálculo de contribución
 ├── requirements.txt
 └── .env
 ```
 
-**Tech Stack:**
+**Stack Tecnológico:**
 
 - FastAPI (Python 3.12)
 - SQLAlchemy (ORM)
-- PostgreSQL (Database)
-- Pydantic (Data validation)
+- PostgreSQL (Base de datos)
+- Pydantic (Validación de datos)
 - python-jose (JWT)
-- passlib + bcrypt (Password hashing)
+- passlib + bcrypt (Hash de contraseñas)
 
 ---
 
-## 7. Database Schema
+## 7. Esquema de Base de Datos
 
-### Tables
+### Tablas
 
-| Table           | Columns                                                                          | Description              |
-| --------------- | -------------------------------------------------------------------------------- | ------------------------ |
-| `users`         | id, email, password_hash, nickname, created_at                                   | User accounts            |
-| `activities`    | id, user_id, title, is_done, date, created_at                                    | Daily tasks              |
-| `goals`         | id, user_id, title, target_days, start_date, is_active, created_at               | Custom goals             |
-| `goal_days`     | id, goal_id, day_number, is_completed, completed_at                              | Goal day tracking        |
-| `bad_habits`    | id, user_id, name, current_streak, longest_streak, last_relapse_date, created_at | Habit tracking           |
-| `contributions` | id, user_id, date, level                                                         | Annual contribution data |
+| Tabla          | Columnas                                                                      | Descripción              |
+| -------------- | ----------------------------------------------------------------------------- | ---------------------- |
+| `users`        | id, email, password_hash, nickname, created_at                                | Cuentas de usuario     |
+| `activities`   | id, user_id, title, is_done, date, created_at                               | Tareas diarias          |
+| `goals`        | id, user_id, title, target_days, start_date, is_active, created_at           | Metas personalizadas   |
+| `goal_days`    | id, goal_id, day_number, is_completed, completed_at                          | Seguimiento de días    |
+| `bad_habits`   | id, user_id, name, current_streak, longest_streak, last_relapse_date, created_at | Seguimiento de hábitos |
+| `contributions`| id, user_id, date, level                                                     | Datos de contribución anual |
 
 ---
 
-## 8. API Endpoints
+## 8. Endpoints de API
 
-### Authentication
+### Autenticación
 
-| Method | Endpoint         | Description         |
-| ------ | ---------------- | ------------------- |
-| POST   | `/auth/register` | Register new user   |
-| POST   | `/auth/login`    | Login (returns JWT) |
-| GET    | `/auth/me`       | Get current user    |
+| Método | Endpoint         | Descripción              |
+| ------ | ---------------- | ---------------------- |
+| POST   | `/auth/register` | Registrar nuevo usuario |
+| POST   | `/auth/login`    | Iniciar sesión (retorna JWT) |
+| GET    | `/auth/me`       | Obtener usuario actual |
 
-### Activities
+### Actividades
 
-| Method | Endpoint           | Description                           |
+| Método | Endpoint           | Descripción                           |
 | ------ | ------------------ | ------------------------------------- |
-| GET    | `/activities`      | List activities (filter: date_filter) |
-| POST   | `/activities`      | Create activity                       |
-| PUT    | `/activities/{id}` | Update activity                       |
-| DELETE | `/activities/{id}` | Delete activity                       |
+| GET    | `/activities`      | Listar actividades (filtro: fecha)   |
+| POST   | `/activities`      | Crear actividad                       |
+| PUT    | `/activities/{id}` | Actualizar actividad                  |
+| DELETE | `/activities/{id}` | Eliminar actividad                   |
 
-### Goals
+### Metas
 
-| Method | Endpoint           | Description                      |
+| Método | Endpoint           | Descripción                      |
 | ------ | ------------------ | -------------------------------- |
-| GET    | `/goals`           | List goals (filter: active_only) |
-| POST   | `/goals`           | Create goal                      |
-| PUT    | `/goals/{id}`      | Update goal                      |
-| PATCH  | `/goals/{id}/days` | Toggle goal day                  |
-| DELETE | `/goals/{id}`      | Delete goal                      |
+| GET    | `/goals`           | Listar metas (filtro: solo activas) |
+| POST   | `/goals`           | Crear meta                       |
+| PUT    | `/goals/{id}`      | Actualizar meta                  |
+| PATCH  | `/goals/{id}/days` | Alternar día de meta             |
+| DELETE | `/goals/{id}`      | Eliminar meta                    |
 
-### Bad Habits
+### Malos Hábitos
 
-| Method | Endpoint                     | Description      |
-| ------ | ---------------------------- | ---------------- |
-| GET    | `/bad-habits`                | List bad habits  |
-| POST   | `/bad-habits`                | Create bad habit |
-| PUT    | `/bad-habits/{id}`           | Update bad habit |
-| POST   | `/bad-habits/{id}/relapse`   | Trigger relapse  |
-| POST   | `/bad-habits/{id}/increment` | Increment streak |
-| DELETE | `/bad-habits/{id}`           | Delete bad habit |
+| Método | Endpoint                     | Descripción           |
+| ------ | ---------------------------- | -------------------- |
+| GET    | `/bad-habits`                | Listar malos hábitos |
+| POST   | `/bad-habits`                | Crear mal hábito     |
+| PUT    | `/bad-habits/{id}`           | Actualizar mal hábito|
+| POST   | `/bad-habits/{id}/relapse`   | Activar recaída      |
+| POST   | `/bad-habits/{id}/increment` | Incrementar racha    |
+| DELETE | `/bad-habits/{id}`           | Eliminar mal hábito  |
 
-### Contributions
+### Contribuciones
 
-| Method | Endpoint                     | Description                       |
-| ------ | ---------------------------- | --------------------------------- |
-| GET    | `/contributions`             | List contributions (filter: year) |
-| GET    | `/contributions/year/{year}` | Get year contributions            |
-
----
-
-## 9. UI/UX Design
-
-### Theme
-
-- **Mode:** Dark mode
-- **Primary Color:** Green (productivity)
-- **Accent Colors:**
-  - Green Accent (goals, activities)
-  - Red Accent (bad habits)
-
-### Layout
-
-- **Desktop:** Two-column layout
-  - Left: Annual contribution grid
-  - Right: Activities, Goals, Bad Habits
-- **Mobile:** Single column with scroll
-
-### Key Screens
-
-1. **Login Screen** - Email + password form
-2. **Register Screen** - Email + password + nickname form
-3. **Home/Calendar** - Main dashboard with all features
+| Método | Endpoint                     | Descripción                      |
+| ------ | ---------------------------- | -------------------------------- |
+| GET    | `/contributions`             | Listar contribuciones (filtro: año) |
+| GET    | `/contributions/year/{year}` | Obtener contribuciones del año  |
 
 ---
 
-## 10. Non-Functional Requirements
+## 9. Diseño UI/UX
 
-- **Performance:** API responses < 500ms
-- **Security:** JWT tokens with 30-min expiration
-- **Compatibility:** Android, iOS, Web, Desktop (Flutter)
-- **Data Persistence:** All data stored in PostgreSQL
+### Tema
 
----
+- **Modo:** Modo oscuro y claro (sistema)
+- **Color Principal:** Púrpura (Material Design 3 seed)
+- **Colores de Acento:**
+  - Verde (metas, actividades)
+  - Rojo (malos hábitos)
 
-## 11. Future Enhancements (Out of Scope)
+### Diseño
 
-- [ ] Activity categories/tags
-- [ ] Goal templates
-- [ ] Statistics and analytics
-- [ ] Export data (CSV/JSON)
-- [ ] Notifications/reminders
-- [ ] Multi-language support
-- [ ] Dark/Light theme toggle
-- [ ] Cloud sync
-- [ ] Social features
+- **Escritorio:** Diseño de dos columnas
+  - Izquierda: Grille de contribución anual
+  - Derecha: Actividades, Metas, Malos Hábitos
+- **Móvil:** Columna simple con scroll
 
----
+### Pantallas Clave
 
-## 12. Milestones
-
-| Milestone | Description                   | Status      |
-| --------- | ----------------------------- | ----------- |
-| M1        | Backend setup + Database      | ✅ Complete |
-| M2        | Authentication (JWT)          | ✅ Complete |
-| M3        | Activities CRUD               | ✅ Complete |
-| M4        | Goals CRUD                    | ✅ Complete |
-| M5        | Bad Habits CRUD + Streaks     | ✅ Complete |
-| M6        | Contribution Grid + Auto-calc | ✅ Complete |
-| M7        | Frontend Integration          | ✅ Complete |
-| M8        | Login/Register Screens        | ✅ Complete |
+1. **Pantalla de Login** - Formulario de email + contraseña
+2. **Pantalla de Registro** - Formulario de email + contraseña + nickname
+3. **Home/Calendar** - Dashboard principal con todas las funcionalidades
 
 ---
 
-**Document Version:** 1.0  
-**Last Updated:** March 4, 2026  
-**Author:** Ezquiz0 (JhosueP)
+## 10. Requisitos No Funcionales
+
+- **Rendimiento:** Respuestas de API < 500ms
+- **Seguridad:** Tokens JWT con expiración de 30 minutos
+- **Compatibilidad:** Android, iOS, Web, Escritorio (Flutter)
+- **Persistencia de Datos:** Todos los datos almacenados en PostgreSQL
+
+---
+
+## 11. Mejoras Futuras (Fuera del Alcance)
+
+- [ ] Categorías/etiquetas de actividades
+- [ ] Plantillas de metas
+- [ ] Estadísticas y análisis
+- [ ] Exportar datos (CSV/JSON)
+- [ ] NotificacionesRecordatorios
+- [ ] Soporte multiidioma
+- [ ] Alternar tema oscuro/claro
+- [ ] Sincronización en la nube
+- [ ] Funciones sociales
+
+---
+
+## 12. Hitos
+
+| Hito | Descripción                         | Estado      |
+| ---- | ----------------------------------- | ----------- |
+| M1   | Configuración de Backend + Base de datos | ✅ Completo |
+| M2   | Autenticación (JWT)                 | ✅ Completo |
+| M3   | CRUD de Actividades                 | ✅ Completo |
+| M4   | CRUD de Metas                       | ✅ Completo |
+| M5   | CRUD de Malos Hábitos + Rachas     | ✅ Completo |
+| M6   | Grille de Contribuciones + Cálculo automático | ✅ Completo |
+| M7   | Integración de Frontend             | ✅ Completo |
+| M8   | Pantallas de Login/Registro         | ✅ Completo |
+| M9   | Mejora de UI con Material Design 3 | ✅ Completo |
+
+---
+
+**Versión del Documento:** 1.1  
+**Última Actualización:** 4 de Marzo de 2026  
+**Autor:** Ezquiz0 (JhosueP)
